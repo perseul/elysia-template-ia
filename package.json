@@ -2,11 +2,19 @@
   "name": "elysia-template-ia",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "start": "bun src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/cors": "^0.8.0",
+    "@elysiajs/html": "^0.8.0",
+    "@elysiajs/jwt": "^0.8.0",
+    "@elysiajs/swagger": "^0.8.5",
+    "@grotto/logysia": "^0.1.1",
+    "elysia": "latest",
+    "elysia-helmet": "^1.0.2",
+    "mongoose": "^8.1.1"
   },
   "devDependencies": {
     "bun-types": "latest"
