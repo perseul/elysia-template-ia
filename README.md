@@ -12,6 +12,8 @@ bun create elysia ./elysia-example
 ```
 
 ## How to (Como utizar)
+- Cole as informações do banco no arquivo .env
+
 Instale as dependencias do projeto com:
 ```bash
 bun install
@@ -19,7 +21,11 @@ bun install
 
 Para iniciar o servidor de desenvolvimento digite o comando:
 ```bash
-bun run dev
+bun dev
+```
+Para executar os testes:
+```bash
+bun test
 ```
 
 Open http://localhost:3000/ with your browser to see the result.
