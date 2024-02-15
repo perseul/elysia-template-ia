@@ -1,7 +1,7 @@
 import { describe, expect, it, afterAll } from 'bun:test';
 import { app } from '../src/index';
 
-const baseUrl = `${app.server?.hostname}:${app.server?.port}/api/usuarios`; // localhost:3000/api/usuarios
+const baseUrl = `${app.server?.hostname}:${app.server?.port}/api/usuarios`;
 
 describe('USUARIOS Test suite', () => {
 
