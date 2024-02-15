@@ -28,12 +28,10 @@ export const usuariosController = (app: Elysia) =>
 
               const usuarioSalvo = await novoUsuario.save();
 
-              // JWT payload is based off user id
               const accessToken = await handler.jwt.sign({
                 userId: usuarioSalvo._id
               });
 
-              // Returning JTW to the client (via headers)
               handler.set.headers = {
                 'X-Authorization': accessToken,
               };
@@ -41,7 +39,6 @@ export const usuariosController = (app: Elysia) =>
 
               return novoUsuario;
             } catch (e: any) {
-              // If unique mongoose constraint (for username or email) is violated
               if (e.name === 'MongoServerError' && e.code === 11000) {
                 handler.set.status = 422;
                 return {
